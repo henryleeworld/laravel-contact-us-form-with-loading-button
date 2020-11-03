@@ -75,7 +75,7 @@ export default {
             this.errors = {};
             this.isLoading = true;
             this.isSuccess = false;
-            axios.post('/submit', this.data)
+            axios.post('/contact-us', this.data)
                 .then(() => this.isSuccess = true)
                 .catch(({response}) => {
                     if (response.status === 422) {

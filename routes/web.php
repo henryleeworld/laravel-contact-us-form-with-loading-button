@@ -12,11 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::redirect('/home', '/');
-
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-
-Route::post('/submit', 'HomeController@submit')->name('submit');
+Route::get('/contact-us', [App\Http\Controllers\ContactUsController::class, 'index'])->name('contact-us');
+Route::post('/contact-us', [App\Http\Controllers\ContactUsController::class, 'store']);
