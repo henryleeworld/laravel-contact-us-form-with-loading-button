@@ -1,4 +1,4 @@
-# Laravel 8 帶有載入效果按鈕的聯絡表單
+# Laravel 10 帶有載入效果按鈕的聯絡表單
 
 聯絡表單提交按鈕在點擊之後，會有一兩秒的等待時間，使用帶有載入效果顯示提交時間，並透過電子郵件聯絡表單取得網站訪客的意見回饋，進而改善產品和服務，並運用這些想法改善所有人的體驗。
 
@@ -31,8 +31,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/lYVfvev.gif)
+![](https://i.imgur.com/3gTBO2A.gif)
 > 訪客透過聯絡表單傳達訊息
 
-![](https://i.imgur.com/FGSOVf0.png)
+![](https://i.imgur.com/16nfypC.png)
 > 透過表單寄送電子郵件給網站管理者

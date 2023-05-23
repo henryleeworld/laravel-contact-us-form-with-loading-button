@@ -1,6 +1,6 @@
 <template>
     <form>
-        <div class="form-group">
+        <div class="mb-3">
             <label for="name">姓名</label>
             <input
                 type="text"
@@ -13,7 +13,7 @@
                 {{ errors.name[0] }}
             </span>
         </div>
-        <div class="form-group">
+        <div class="mb-3">
             <label for="email">電子郵件地址</label>
             <input
                 type="email"
@@ -27,7 +27,7 @@
             </span>
         </div>
 
-        <div class="form-group">
+        <div class="mb-3">
             <label for="question">問題</label>
             <textarea
                 class="form-control"
@@ -44,8 +44,8 @@
             :styled="false"
             :loading="isLoading"
             @click.native="submitForm"
-            class='h6 btn btn-sm btn-primary'
-        ></VueLoadingButton>
+            class="h6 btn btn-sm btn-primary"
+        >提交</VueLoadingButton>
 
         <div class="alert alert-success my-2" v-if="isSuccess">
             電子郵件發送成功
