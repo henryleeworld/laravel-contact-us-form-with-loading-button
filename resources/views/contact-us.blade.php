@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header">{{ trans('frontend.contact_us.title') }}</div>
+                <div class="card-header">{{ __('Contact Us') }}</div>
 
                 <div class="card-body" id="app">
                     <div class="row">

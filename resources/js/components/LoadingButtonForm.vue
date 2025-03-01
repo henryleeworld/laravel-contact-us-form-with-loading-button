@@ -1,7 +1,7 @@
 <template>
     <form>
         <div class="mb-3">
-            <label for="name">姓名</label>
+            <label for="name">{{ $t('Name') }}</label>
             <input
                 type="text"
                 class="form-control"
@@ -14,7 +14,7 @@
             </span>
         </div>
         <div class="mb-3">
-            <label for="email">電子郵件地址</label>
+            <label for="email">{{ $t('Email Address') }}</label>
             <input
                 type="email"
                 class="form-control"
@@ -28,7 +28,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="question">問題</label>
+            <label for="question">{{ $t('Question') }}</label>
             <textarea
                 class="form-control"
                 :class="{ 'is-invalid': errors.hasOwnProperty('question') }"
@@ -45,10 +45,10 @@
             :loading="isLoading"
             @click.native="submitForm"
             class="h6 btn btn-sm btn-primary"
-        >提交</VueLoadingButton>
+        >{{ $t('Submit') }}</VueLoadingButton>
 
         <div class="alert alert-success my-2" v-if="isSuccess">
-            電子郵件發送成功
+            {{ $t('Email sent successfully') }}
         </div>
     </form>
 </template>

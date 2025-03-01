@@ -1,4 +1,4 @@
-# Laravel 10 帶有載入效果按鈕的聯絡表單
+# Laravel 11 帶有載入效果按鈕的聯絡表單
 
 聯絡表單提交按鈕在點擊之後，會有一兩秒的等待時間，使用帶有載入效果顯示提交時間，並透過電子郵件聯絡表單取得網站訪客的意見回饋，進而改善產品和服務，並運用這些想法改善所有人的體驗。
 
@@ -16,13 +16,17 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
@@ -31,8 +35,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/3gTBO2A.gif)
+![](https://i.imgur.com/LOaU4Ff.gif)
 > 訪客透過聯絡表單傳達訊息
 
-![](https://i.imgur.com/16nfypC.png)
+![](https://i.imgur.com/3yuAuOk.png)
 > 透過表單寄送電子郵件給網站管理者

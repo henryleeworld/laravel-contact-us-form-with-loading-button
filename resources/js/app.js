@@ -1,5 +1,6 @@
 import './bootstrap';
 import Vue from 'vue';
+import VueI18n from 'vue-i18n';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -8,6 +9,16 @@ import Vue from 'vue';
  */
 
 window.Vue = Vue;
+
+Vue.use(VueI18n);
+
+Vue.config.productionTip = false;
+
+var i18n = new VueI18n({
+    locale: 'zh_TW',
+    fallbackLocale: 'en',
+    messages: LARAVEL_TRANSLATIONS
+});
 
 import LoadingButtonForm from './components/LoadingButtonForm.vue';
 import LoadingOverlayForm from './components/LoadingOverlayForm.vue';
@@ -20,5 +31,6 @@ Vue.component('loading-overlay-form', LoadingOverlayForm);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 const app = new Vue({
-    el:'#app'
+    el:'#app',
+    i18n,
 });
